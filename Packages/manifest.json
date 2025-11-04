@@ -2,7 +2,7 @@
   "dependencies": {
     "com.meta.xr.sdk.core": "81.0.0",
     "com.meta.xr.sdk.interaction.ovr": "81.0.0",
-    "com.meta.xr.sdk.movement": "file:/Users/camiladasilva/Desktop/Unity-Movement-78.0.0",
+    "com.meta.xr.sdk.movement": "file:C:/Users/kille/Downloads/Unity-Movement-main/Unity-Movement-main",
     "com.meta.xr.simulator": "81.0.0",
     "com.unity.collab-proxy": "2.10.0",
     "com.unity.feature.development": "1.0.1",
