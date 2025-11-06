@@ -9,14 +9,16 @@ public class LaserHit : MonoBehaviour
         if (other.CompareTag("Character"))
         {
             // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Time.timeScale = 0f;
+            // Time.timeScale = 0f;
+            FindObjectOfType<FadeToBlackOnly>().StartFade();
         }
 
         // Option B: By layer
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBody"))
         {
             // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            Time.timeScale = 0f;
+            // Time.timeScale = 0f;
+            FindObjectOfType<FadeToBlackOnly>().StartFade();
         }
     }
 
