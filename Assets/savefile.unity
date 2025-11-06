@@ -419,7 +419,7 @@ PrefabInstance:
       addedObject: {fileID: 1190597630}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: caa2e19ecd8954ab98e76d0819bcfd6d, type: 3}
       insertIndex: 3
-      addedObject: {fileID: 1963029647}
+      addedObject: {fileID: 1038346479}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: caa2e19ecd8954ab98e76d0819bcfd6d, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1863001360}
@@ -642,6 +642,74 @@ CapsuleCollider:
   m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &224566462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224566463}
+  - component: {fileID: 224566464}
+  - component: {fileID: 224566465}
+  m_Layer: 6
+  m_Name: ColliderObj
+  m_TagString: Laser
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224566463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224566462}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.57, y: 1.69, z: -3.527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1038346479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &224566464
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224566462}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 100
+  m_Height: 80
+  m_Direction: 1
+  m_Center: {x: 0, y: 50, z: 0}
+--- !u!114 &224566465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224566462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45e5d966b429423ab1a184fcfaefce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &226019874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1243,7 @@ Material:
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _LightSaberFactor: 0.94
-    - _LineScale: 0.024825802
+    - _LineScale: 0.0248258
     - _LineWidth: 9
     - _Metallic: 0
     - _Mode: 0
@@ -3502,6 +3570,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 130680514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1038346478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038346479}
+  m_Layer: 6
+  m_Name: LaserParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1038346479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038346478}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1963029647}
+  - {fileID: 224566463}
+  m_Father: {fileID: 69385810}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089824668
 GameObject:
   m_ObjectHideFlags: 0
@@ -5049,7 +5150,7 @@ Mesh:
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0, y: 50, z: 0}
-    m_Extent: {x: 0.33299994, y: 50.333, z: 0.33299994}
+    m_Extent: {x: 0.3329999, y: 50.333, z: 0.3329999}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
@@ -6722,7 +6823,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 69385810}
+    m_TransformParent: {fileID: 1038346479}
     m_Modifications:
     - target: {fileID: 122648, guid: 11530f2b0a0cd2442949827ecbb622f2, type: 3}
       propertyPath: m_Name
@@ -6738,11 +6839,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 436056, guid: 11530f2b0a0cd2442949827ecbb622f2, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.00047741996
+      value: 0.00047741993
       objectReference: {fileID: 0}
     - target: {fileID: 436056, guid: 11530f2b0a0cd2442949827ecbb622f2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.073999986
+      value: 0.07399998
       objectReference: {fileID: 0}
     - target: {fileID: 436056, guid: 11530f2b0a0cd2442949827ecbb622f2, type: 3}
       propertyPath: m_LocalScale.z
@@ -6881,7 +6982,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 300
   m_Height: 80
