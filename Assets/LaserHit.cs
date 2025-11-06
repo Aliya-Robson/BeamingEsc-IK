@@ -8,13 +8,13 @@ public class LaserHit : MonoBehaviour
         // Option A: By tag
         if (other.CompareTag("Character"))
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         // Option B: By layer
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBody"))
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
