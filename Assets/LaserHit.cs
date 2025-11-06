@@ -10,23 +10,15 @@ public class LaserHit : MonoBehaviour
         // Option A: By tag
         if (other.CompareTag("Player"))
         {
-            EndGame();
+            SceneManager.LoadScene("EndScene");
         }
 
         // Option B: By layer
         if (other.gameObject.layer == LayerMask.NameToLayer("PlayerBody"))
         {
-            EndGame();
+            SceneManager.LoadScene("EndScene");
         }
     }
 
-    void EndGame()
-    {
-        Debug.Log("Laser touched! GAME OVER");
 
-        // restart scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
-    }
 }
