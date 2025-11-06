@@ -6,7 +6,7 @@ public class LaserHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Option A: By tag
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Character"))
         {
             SceneManager.LoadScene("EndScene");
         }
